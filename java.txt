@@ -1,0 +1,310 @@
+//Develop a swing window that will print words and characters count of a text written inside text area
+
+import javax.swing.*;
+        import java.awt.event.*;
+
+public class WordCharCounter extends JFrame {
+    private JTextArea textArea;
+    private JLabel wordCountLabel;
+    private JLabel charCountLabel;
+
+    public WordCharCounter() {
+        setTitle("Word and Character Counter");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        textArea = new JTextArea();
+        textArea.setBounds(20, 20, 350, 150);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        textArea.addKeyListener(new KeyAdapter() {
+            public void keyReleased(KeyEvent e) {
+                countWordsAndChars();
+            }
+        });
+        add(textArea);
+
+        wordCountLabel = new JLabel("Words: 0");
+        wordCountLabel.setBounds(20, 180, 100, 30);
+        add(wordCountLabel);
+
+        charCountLabel = new JLabel("Characters: 0");
+        charCountLabel.setBounds(20, 220, 120, 30);
+        add(charCountLabel);
+    }
+
+    private void countWordsAndChars() {
+        String text = textArea.getText();
+        String[] words = text.trim().split("\\s+");
+        int wordCount = words.length;
+
+        int charCount = text.replaceAll("\\s", "").length();
+
+        wordCountLabel.setText("Words: " + wordCount);
+        charCountLabel.setText("Characters: " + charCount);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            WordCharCounter counter = new WordCharCounter();
+            counter.setVisible(true);
+        });
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+//Create a food ordering system with text box, radio button, check box, combo box that
+will generate a Message dialog box which show total bill based on the order
+given as inputs.
+
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class FoodOrderingSystem extends JFrame {
+    private JTextField quantityField;
+    private JRadioButton pizzaButton, burgerButton;
+    private JCheckBox cokeCheckBox, friesCheckBox;
+    private JComboBox<String> sizeComboBox;
+    private JButton orderButton;
+
+    public FoodOrderingSystem() {
+        setTitle("Food Ordering System");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        JLabel quantityLabel = new JLabel("Quantity:");
+        quantityLabel.setBounds(20, 20, 80, 30);
+        add(quantityLabel);
+
+        quantityField = new JTextField();
+        quantityField.setBounds(100, 20, 100, 30);
+        add(quantityField);
+
+        JLabel foodLabel = new JLabel("Select Food:");
+        foodLabel.setBounds(20, 60, 100, 30);
+        add(foodLabel);
+
+        pizzaButton = new JRadioButton("Pizza");
+        pizzaButton.setBounds(120, 60, 80, 30);
+        add(pizzaButton);
+
+        burgerButton = new JRadioButton("Burger");
+        burgerButton.setBounds(210, 60, 80, 30);
+        add(burgerButton);
+
+        ButtonGroup foodGroup = new ButtonGroup();
+        foodGroup.add(pizzaButton);
+        foodGroup.add(burgerButton);
+
+        JLabel sizeLabel = new JLabel("Size:");
+        sizeLabel.setBounds(20, 100, 80, 30);
+        add(sizeLabel);
+
+        String[] sizes = {"Small", "Medium", "Large"};
+        sizeComboBox = new JComboBox<>(sizes);
+        sizeComboBox.setBounds(100, 100, 100, 30);
+        add(sizeComboBox);
+
+        JLabel extrasLabel = new JLabel("Extras:");
+        extrasLabel.setBounds(20, 140, 80, 30);
+        add(extrasLabel);
+
+        cokeCheckBox = new JCheckBox("Coke");
+        cokeCheckBox.setBounds(100, 140, 80, 30);
+        add(cokeCheckBox);
+
+        friesCheckBox = new JCheckBox("Fries");
+        friesCheckBox.setBounds(180, 140, 80, 30);
+        add(friesCheckBox);
+
+        orderButton = new JButton("Place Order");
+        orderButton.setBounds(120, 190, 120, 30);
+        add(orderButton);
+
+        orderButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                calculateBill();
+            }
+        });
+    }
+
+    private void calculateBill() {
+        double totalBill = 0;
+
+        int quantity = Integer.parseInt(quantityField.getText());
+
+        if (pizzaButton.isSelected()) {
+            totalBill += quantity * 8.99; // Pizza price
+        } else if (burgerButton.isSelected()) {
+            totalBill += quantity * 5.99; // Burger price
+        }
+
+        String selectedSize = (String) sizeComboBox.getSelectedItem();
+        if (selectedSize.equals("Small")) {
+            totalBill += 0; // Small size, no extra charge
+        } else if (selectedSize.equals("Medium")) {
+            totalBill += 2.00; // Medium size additional charge
+        } else if (selectedSize.equals("Large")) {
+            totalBill += 4.00; // Large size additional charge
+        }
+
+        if (cokeCheckBox.isSelected()) {
+            totalBill += 1.50; // Coke price
+        }
+        if (friesCheckBox.isSelected()) {
+            totalBill += 2.00; // Fries price
+        }
+
+        JOptionPane.showMessageDialog(this, "Total Bill: $" + totalBill);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            FoodOrderingSystem orderingSystem = new FoodOrderingSystem();
+            orderingSystem.setVisible(true);
+        });
+    }
+}
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+//Create a GUI window with text field, password field and a button. When the button will be clicked, the input given in the text and password field will be printed in the window
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class InputPrinter extends JFrame {
+    private JTextField textField;
+    private JPasswordField passwordField;
+    private JTextArea displayArea;
+
+    public InputPrinter() {
+        setTitle("Input Printer");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        JLabel textLabel = new JLabel("Text:");
+        textLabel.setBounds(20, 20, 50, 30);
+        add(textLabel);
+
+        textField = new JTextField();
+        textField.setBounds(80, 20, 250, 30);
+        add(textField);
+
+        JLabel passwordLabel = new JLabel("Password:");
+        passwordLabel.setBounds(20, 60, 80, 30);
+        add(passwordLabel);
+
+        passwordField = new JPasswordField();
+        passwordField.setBounds(110, 60, 220, 30);
+        add(passwordField);
+
+        JButton displayButton = new JButton("Display");
+        displayButton.setBounds(150, 100, 100, 30);
+        add(displayButton);
+
+        displayArea = new JTextArea();
+        displayArea.setBounds(20, 150, 350, 100);
+        displayArea.setEditable(false);
+        add(displayArea);
+
+        displayButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String textInput = textField.getText();
+                String passwordInput = new String(passwordField.getPassword());
+
+                displayArea.setText("Text: " + textInput + "\nPassword: " + passwordInput);
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            InputPrinter inputPrinter = new InputPrinter();
+            inputPrinter.setVisible(true);
+        });
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+//Create a food ordering system with text box, radio button, check box, combo box that
+will generate a Message dialog box which show total bill based on the order
+given as inputs.
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class PaintApp extends JFrame {
+    private JPanel drawingPanel;
+    private JLabel coordinatesLabel;
+
+    public PaintApp() {
+        setTitle("Paint App");
+        setSize(600, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        drawingPanel = new JPanel();
+        drawingPanel.setBackground(Color.WHITE);
+        drawingPanel.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                drawDot(e.getX(), e.getY());
+            }
+        });
+        drawingPanel.addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseMoved(MouseEvent e) {
+                showCoordinates(e.getX(), e.getY());
+            }
+        });
+        add(drawingPanel, BorderLayout.CENTER);
+
+        coordinatesLabel = new JLabel("X: 0, Y: 0");
+        coordinatesLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        add(coordinatesLabel, BorderLayout.SOUTH);
+    }
+
+    private void drawDot(int x, int y) {
+        Graphics g = drawingPanel.getGraphics();
+        g.setColor(Color.BLACK);
+        g.fillOval(x - 3, y - 3, 6, 6);
+        g.dispose();
+    }
+
+    private void showCoordinates(int x, int y) {
+        coordinatesLabel.setText("X: " + x + ", Y: " + y);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            PaintApp paintApp = new PaintApp();
+            paintApp.setVisible(true);
+        });
+    }
+}
