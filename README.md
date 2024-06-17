@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Souvik Debnath</h1>
 <h3 align="center">A passionate Cybersecurity Enthusiast from India</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=souvik65" alt="souvik65" /></a> </p>
+
 
 - 🔭 I’m currently working on [DDOS Detection Tool](https://github.com/Souvik65/ddos_detect.git)
 
@@ -27,3 +27,5 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=souvik65&show_icons=true&locale=en" alt="souvik65" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=souvik65&" alt="souvik65" /></p>
+
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=souvik65" alt="souvik65" /></a> </p>
