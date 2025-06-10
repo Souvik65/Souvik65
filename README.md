@@ -5,12 +5,7 @@
 
 🔭 I recently built a [DDoS Detection Tool](https://github.com/Souvik65/ddos_detect.git) to help secure websites from attacks.
 
-🌱 Currently learning:
-    - Advanced BASH scripting<br>
-    - Penetration Testing & Network Defense<br>
-    - Real-time automation with Python & Node.js<br>
-
-🌱 I’m currently diving into **Machine Learning** and exploring the world of **Automation**.
+🌱 I’m currently diving into **Machine Learning**, exploring Real-time automation with **Python** and **Penetration Testing & Network Defense**.
 
 👨‍💻 Check out all my projects at: [My GitHub Repositories](https://github.com/Souvik65?tab=repositories)
 
