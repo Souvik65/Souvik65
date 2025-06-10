@@ -3,17 +3,18 @@
 
 
 
-- 🔭 I’m currently working on [DDOS Detection Tool](https://github.com/Souvik65/ddos_detect.git)
+🔭 I recently built a [DDoS Detection Tool](https://github.com/Souvik65/ddos_detect.git) to help secure websites from attacks.
 
-- 🌱 I’m currently learning **ReactJs**
+🌱 I’m currently diving into **Machine Learning** and exploring the world of **Automation**.
 
-- 👨‍💻 All of my projects are available at [https://github.com/Souvik65?tab=repositories](https://github.com/Souvik65?tab=repositories)
+👨‍💻 Check out all my projects at: [My GitHub Repositories](https://github.com/Souvik65?tab=repositories)
 
-- 💬 Ask me about **Cybersecurity**
+💬 Ask me about **Cybersecurity** — I love solving real-world security challenges.
 
-- 📫 How to reach me **souvin9sk9@gmail.com**
+📫 Reach me at **souvin9sk9@gmail.com**
 
-- ⚡ Fun fact **I think I am Funny Codder**
+⚡ Fun fact: **I once tried to automate my life… turns out, coffee machines don’t support Python scripts (yet).**
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
