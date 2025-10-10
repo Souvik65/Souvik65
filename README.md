@@ -11,7 +11,7 @@
 
 💬 Ask me about **Cybersecurity** — I love solving real-world security challenges.
 
-📫 Reach me at **souvin9sk9@gmail.com**
+📫 Reach me at **hashtagsouvik@gmail.com**
 
 ⚡ Fun fact: **I once tried to automate my life… turns out, coffee machines don’t support Python scripts (yet).**
 
