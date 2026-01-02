@@ -28,9 +28,6 @@
 ![cybersecurity-fundamentals](https://github.com/user-attachments/assets/d3f9034f-ac78-40df-8a7b-edb0837a607e)
 
 
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=souvik65&show_icons=true&locale=en" alt="souvik65" /></p>
-
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=souvik65&" alt="souvik65" /></p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=souvik65" alt="souvik65" /></a> </p>
