@@ -31,7 +31,7 @@
 ###
 
 <div align="center">
-  <img src="https://count.getloli.com/@:Souvik65?theme=asoul&padding=3&offset=0&scale=2&align=top&pixelated=1&darkmode=auto"  />
+  <img src="https://count.getloli.com/@:Souvik65?theme=rule34&padding=4&scale=2&align=top&pixelated=1&darkmode=auto"  />
 </div>
 
 ###
