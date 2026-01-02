@@ -28,13 +28,18 @@
 ![cybersecurity-fundamentals](https://github.com/user-attachments/assets/d3f9034f-ac78-40df-8a7b-edb0837a607e)
 
 
+###
+
+<div align="center">
+  <img src="https://count.getloli.com/@:Souvik65?theme=asoul&padding=3&offset=0&scale=2&align=top&pixelated=1&darkmode=auto"  />
+</div>
+
+###
+
 <br clear="both">
 
 <img src="https://raw.githubusercontent.com/Souvik65/Souvik65/output/snake.svg" alt="Snake animation" />
 
 ###
-
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=souvik65&" alt="souvik65" /></p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=souvik65" alt="souvik65" /></a> </p>
